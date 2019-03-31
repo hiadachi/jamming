@@ -1,0 +1,61 @@
+import React from 'react';
+import './TrackList.css';
+import Track from '../Track/Track';
+
+class TrackList extends React.Component{
+  render(){
+	  console.log("=====");
+	console.log(this.props);
+    return(
+      <div className="TrackList">
+	    {/*
+	       this.props.tracks.map(track=>{
+	         return(
+	            <div className="Track-information">
+			 <p>{track.id}</p>
+		    </div>
+		 );
+	       })
+	   */ 
+	   
+	    }
+
+	    <div className="Track">
+                <div className="Track-information">
+                  <h3>Stronger</h3>
+                  <p>Britney Spears | Oops!... I Did It Again</p>
+                </div>
+                <a className="Track-action">-</a>
+            </div>
+	    <div className="Track">
+                <div className="Track-information">
+                  <h3>So Emotional</h3>
+                  <p>Whitney Houston | Whitney</p>
+                </div>
+                <a className="Track-action">-</a>
+            </div>
+	    <div className="Track">
+                <div className="Track-information">
+                  <h3>It's Not Right But It's Okay</h3>
+                  <p>Whitney Houston | My Love Is Your Love</p>
+                </div>
+                <a className="Track-action">{Track.renderAction}</a>
+            </div>
+	    <div className="Track">
+	      <Track />
+	    </div>
+
+	{/* <!-- You will add a map method that renders a set of Track components  -->  */
+	  this.props.tracks.map(track=>{
+		  console.log(track);
+	    return <Track track={track} />;
+	  })
+	  //console.log(tracks);
+	
+	}
+      </div>
+    );
+  }
+}
+
+export default TrackList;

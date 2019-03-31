@@ -1,0 +1,48 @@
+import React from 'react';
+import './Track.css';
+
+class Track extends React.Component{
+  
+    //console.log(this.props);
+	/*
+	constructor(props){
+    super(props);
+    //this.state = { 
+//	isRemoval: true
+	//name:"tmp_name",
+	//artist:"tmp_artist",
+	//album:"tmp_album"
+  //  }
+    console.log(this.props);
+    //console.log(this.props.track);
+    //console.log(this.props.track.artist);
+    this.renderAction=this.renderAction.bind(this);
+  } 
+	*/
+  renderAction(){
+	  //console.log(this.state.isRemoval);
+    if(this.state.isRemoval){
+      //return (-);
+      return (<a className="Track-action">-</a>);
+    }else{
+      //return (+);
+      return (<a className="Track-action">+</a>);
+    }
+  }
+  render(){
+    return(
+      <div className="Track">
+  	<div className="Track-information">
+    	  <h3>{/*this.props.track.name*/}{/* <!-- track name will go here --> */} </h3>
+    	  <p> {this.props.state.artist} | {this.state.album}{/* <!-- track artist will go here--> | <!-- track album will go here --> */} </p>
+  	</div>
+	    {/* <a className="Track-action">{this.renderAction}</a> */}
+	    {/*console.log(this.state.isRemoval)*/}
+	    {this.renderAction()}
+      </div>
+    
+    );
+  }
+}
+
+export default Track;
