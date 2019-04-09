@@ -3,7 +3,8 @@ let expiresIn  = undefined;
 let playlistID = undefined;
 const clientID = '8f92137b75474197949f434c6c1b2979';
 const url ='https://accounts.spotify.com/authorize';
-const redirectURI = 'http://localhost:3000/';
+//const redirectURI = 'http://localhost:3000/';
+const redirectURI = 'http://andajamming.surge.sh/';
 
 
 const Spotify = {
